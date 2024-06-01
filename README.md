@@ -1,5 +1,5 @@
 # Sudoku-Solver
-Solve the unsolved sudoku in less than a second.
+This project is a Java-based Sudoku solver that uses the concepts of backtracking, 2D arrays, and recursion to solve any given 9x9 Sudoku puzzle. The solver efficiently fills in the empty cells by recursively trying potential solutions and backtracking when conflicts arise, ensuring that all Sudoku rules are met.
 
 
 ## Table of contents

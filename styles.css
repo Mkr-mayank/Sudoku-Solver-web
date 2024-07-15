@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(#fff42c, #f87204);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    gap: 0;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0;
+}
+
+input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+input:focus {
+    background-color: #e0f7fa;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff2a00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d20505;
+}
+
+/* Add specific borders for 3x3 subgrids */
+#sudoku-board input:nth-child(3n+1) {
+    border-left: 2px solid black;
+}
+#sudoku-board input:nth-child(3n) {
+    border-right: 2px solid black;
+}
+#sudoku-board input:nth-child(n+1) {
+    border-top: 2px solid black;
+}
+#sudoku-board input:nth-child(n+10) {
+    border-top: 0;
+}
+#sudoku-board input:nth-child(n+19):nth-child(-n+27) {
+    border-bottom: 2px solid black;
+}
+#sudoku-board input:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid black;
+}
+#sudoku-board input:nth-child(n+73) {
+    border-bottom: 2px solid black;
+}

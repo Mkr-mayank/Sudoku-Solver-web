@@ -40,7 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputs = board.getElementsByTagName('input');
         for (let i = 0; i < 9; i++) {
             for (let j = 0; j < 9; j++) {
-                inputs[i * 9 + j].value = sudoku[i][j] || '';
+                if (inputs[i * 9 + j].value == '') {
+                    inputs[i * 9 + j].value = sudoku[i][j];
+                    inputs[i * 9 + j].classList.add('solved-cell');
+                }
+                else{
+                    inputs[i * 9 + j].value = sudoku[i][j] || '';
+                }
             }
         }
     }
@@ -49,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputs = board.getElementsByTagName('input');
         for (let input of inputs) {
             input.value = '';
+            input.classList.remove('solved-cell');
         }
     }
 

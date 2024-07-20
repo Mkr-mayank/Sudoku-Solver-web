@@ -3,7 +3,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
     background: radial-gradient(#fff42c, #f87204);
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,7 +19,6 @@ body {
     margin-bottom: 20px;
     position: relative;
     padding: 0;
-    /* box-sizing: content-box; */
 }
 
 input {
@@ -42,7 +40,7 @@ button {
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #ff470f;
+    background-color: #ff2a00;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -60,13 +58,9 @@ button:hover {
 #sudoku-board input:nth-child(3n) {
     border-right: 2px solid black;
 }
-/* #sudoku-board input:nth-child(3n+1) {
-    border-right: 0;
-} */
 #sudoku-board input:nth-child(n+1) {
     border-top: 2px solid black;
 }
-
 #sudoku-board input:nth-child(n+10) {
     border-top: 0;
 }
@@ -76,8 +70,9 @@ button:hover {
 #sudoku-board input:nth-child(n+46):nth-child(-n+54) {
     border-bottom: 2px solid black;
 }
-
 #sudoku-board input:nth-child(n+73) {
     border-bottom: 2px solid black;
 }
-
+.solved-cell {
+    color: rgb(21, 0, 255);
+}
